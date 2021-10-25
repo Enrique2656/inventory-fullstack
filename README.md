@@ -1,13 +1,5 @@
-## Installation
-
-1. Clone repo
-2. run `npm install`
-
-## Usage
-
-1. run `node server.js`
-2. Navigate to `localhost:8080`
-
-## Credit
-
-Modified from Scotch.io's auth tutorial
+```
+I completed the challenge: 5
+I feel good about my code: 3
+I feel ok about this project, i really used this week to get familiar with writing full stack. Any feed back is appreciated
+```
