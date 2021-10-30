@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>21 Savage Fan Site</title>
+    <title>Inventory List</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
@@ -22,12 +22,16 @@
   <ul class="messages">
   <% for(var i=0; i<messages.length; i++) { %>
     <li class="message">
-      <span><%= messages[i].name %></span>
-      <span><%= messages[i].cat %></span>
-      <span><%= messages[i].plus %></span>
+      <span>Product Name: </span><span class="name"><%= messages[i].name %></span><br>
+      <span>Category: </span><span class="cat"><%= messages[i].cat %></span><br>
+      <span>Qty: </span><span class="plus"><%= messages[i].plus %></span>
       <span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
       <span><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
       <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+
+      <input class="newQty" type="number" placeholder="Qty" name="qty">
+      <button class="update">Update Qty</button>
+
     </li>
   <% } %>
   </ul>

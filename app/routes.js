@@ -67,6 +67,23 @@ app.put('/minusQty', (req, res) => {
   })
 })
 
+app.put('/updateQty', (req, res) => {
+  db.collection('inventoryList')
+  .findOneAndUpdate({name: req.body.name, cat: req.body.cat}, {
+    $set: {
+      plus:req.body.plus
+    }
+  }, {
+    sort: {_id: -1},
+    upsert: true
+  }, (err, result) => {
+    if (err) return res.send(err)
+    res.send(result)
+  })
+})
+
+
+
 
 app.delete('/delete', (req, res) => {
   db.collection('inventoryList').findOneAndDelete({name: req.body.name, cat: req.body.cat}, (err, result) => {
