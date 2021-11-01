@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+<div class="profiletop">
 
     <div class="page-header text-center">
         <h1><span class="fa fa-anchor"></span> Profile Page</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 </div>
+
+<div class="profilebottom">
 <h2>Welcome!</h2>
-  <h1>Personal Inventory List</h1>
+  <h1>Company Inventory List</h1>
 
 
-  <h3>Inventory</h3>
+  <h3>Inventory:</h3>
   <ul class="messages">
   <% for(var i=0; i<messages.length; i++) { %>
     <li class="message">
@@ -43,6 +45,7 @@
     <input type="text" placeholder="Category" name="cat">
     <button type="submit">Submit</button>
   </form>
+</div>
 <script src="main.js"></script>
 
 </body>
