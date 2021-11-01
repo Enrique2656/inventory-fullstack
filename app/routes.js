@@ -1,4 +1,6 @@
-module.exports = function(app, passport, db) {
+const { mongo } = require("mongoose");
+
+module.exports = function(app, passport, db, mongodb) {
 
 // normal routes ===============================================================
 
@@ -69,7 +71,7 @@ app.put('/minusQty', (req, res) => {
 
 app.put('/updateQty', (req, res) => {
   db.collection('inventoryList')
-  .findOneAndUpdate({name: req.body.name, cat: req.body.cat}, {
+  .findOneAndUpdate({_id: mongodb.ObjectID(req.body.id)}, {
     $set: {
       plus:req.body.plus
     }

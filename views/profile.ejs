@@ -24,6 +24,7 @@
   <ul class="messages">
   <% for(var i=0; i<messages.length; i++) { %>
     <li class="message">
+      <input type="hidden" value=<%= messages[i]._id %>>
       <span>Product Name: </span><span class="name"><%= messages[i].name %></span><br>
       <span>Category: </span><span class="cat"><%= messages[i].cat %></span><br>
       <span>Qty: </span><span class="plus"><%= messages[i].plus %></span>

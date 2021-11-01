@@ -52,15 +52,15 @@ Array.from(minus).forEach(function(element) {
 
 Array.from(update).forEach(function(element) {
   element.addEventListener('click', function(){
-    const name = this.parentNode.parentNode.querySelector('.name').innerText
-    const cat = this.parentNode.parentNode.querySelector('.cat').innerText
-    const plus = parseFloat(this.parentNode.parentNode.querySelector('.newQty').value)
+    const id = this.parentNode.children[0].value
+    // const cat = this.parentNode.parentNode.querySelector('.cat').innerText
+    const plus = parseFloat(this.parentNode.children[12].value)
     fetch('updateQty', {
       method: 'put',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        'name': name,
-        'cat': cat,
+        'id': id,
+        // 'cat': cat,
         'plus':plus
       })
     })
